@@ -4,8 +4,6 @@ from random import choice, randint, shuffle
 import pyperclip
 import json
 
-# ---------------------------- PASSWORD GENERATOR ------------------------------- #
-
 
 def generate_password():
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
@@ -27,8 +25,6 @@ def generate_password():
 
     password_entry.insert(0, gen_password)
     pyperclip.copy(gen_password)
-
-# ---------------------------- SAVE PASSWORD ------------------------------- #
 
 
 def save():
@@ -65,8 +61,6 @@ def save():
             website_entry.delete(0, END)
             password_entry.delete(0, END)
 
-# ---------------------------- FIND PASSWORD ------------------------------- #
-
 
 def find_password():
     try:
@@ -82,8 +76,6 @@ def find_password():
     except KeyError:
         messagebox.showwarning(title="Website Error", message="No details for the website exists.")
 
-
-# ---------------------------- UI SETUP ------------------------------- #
 
 # Window
 
